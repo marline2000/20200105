@@ -1,0 +1,257 @@
+<!--개인자유복습-->
+
+<!DOCTYPE html>
+<!--자동정렬은 Ctrl+K+F-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀문서</title>
+    <script src="confetti.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS676peYzl4y8JwyFEXaaDlF3MzbpHVeK1aog&usqp=CAU">
+    <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
+    <meta property="og:image"
+        content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmnOFyveUV1_4bWJYMbJKg7zpQWn5swipUFw&usqp=CAU">
+    <meta property="og:title" content="비밀문서">
+    <meta property="og:description" content="회원만 열람 가능합니다.">
+
+    <style>
+        * {
+            font-family: 'Gugi', cursive;
+        }
+
+        body {
+            background-color: rgb(88, 69, 57);
+        }
+
+
+
+        .ALL {
+
+            width: 500px;
+            height: 500px;
+            margin: 100px auto auto auto;
+            background-color: white;
+            border-radius: 50px;
+            padding-top: 60px;
+        }
+
+        .LOG {
+            width: 400px;
+            height: 250px;
+            text-align: center;
+            margin: auto;
+            color: black;
+
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUtYKK62rXZ6ar6rcg9ptrEL9G4f1rJzWPtQ&usqp=CAU');
+            background-size: cover;
+            background-position: center;
+
+            padding-top: 20px;
+        }
+
+        .IN {
+            width: 400px;
+            height: 180px;
+            color: black;
+            margin-left: 70px;
+
+        }
+
+        .Btn {
+            width: 110px;
+            height: 80px;
+            color: white;
+            background-color: rgb(172, 26, 26);
+            text-align: auto;
+            margin-left: 250px;
+            margin-top: -70px;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+
+        .LOGIN {
+            display: block;
+        }
+
+        .SHOW {
+            display: none;
+        }
+
+        .MAIN {
+            width: 600px;
+            height: 700px;
+            background-color: white;
+            border: 1px solid white;
+            margin: 100px auto 100px auto;
+        }
+
+        .pw {
+            margin-top: -40px;
+        }
+
+        .number5 {
+            margin-top: -85px;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        .zi {
+            margin-left: 380px;
+            margin-top: -90px;
+        }
+
+
+        @media screen and (max-width: 760px) {
+
+            /*760px보다 작을때 적용 즉 타블렛, 아이패드보다 작을때(모바일처리)
+            대체적으로 365x645면 대부분의 핸드폰 커버 가능*/
+
+            .ALL {
+                width: 300px;
+                padding: 20px;
+            }
+
+            .LOG {
+                width: 300px;
+                background-size: 280px 170px;
+                height: 200px;
+
+            }
+
+            .IN {
+                margin-left: 0px;
+            }
+
+            .Btn {
+                width: 90px;
+                height: 30px;
+                margin-left: 200px;
+                margin-top: 70px;
+                cursor: pointer;
+            }
+
+            .pw {
+                margin-top: -80px;
+            }
+
+            .MAIN {
+                width: 300px;
+                height: 450px;
+            }
+
+            h4 {
+                font-size: 7px;
+            }
+
+            h3 {
+                font-size: 14px;
+            }
+
+            .gone {
+                display: none;
+            }
+
+            .number5 {
+                margin-top: 0px;
+            }
+
+            .zi {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        function START_LOGIN() {
+            alert('사실 모두 열람 가능합니다.')
+            document.getElementsByClassName("LOGIN")[0].style.display = 'none'
+            document.getElementsByClassName("SHOW")[0].style.display = 'block'
+            confetti.start(1000)
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="LOGIN">
+
+        <div class="ALL">
+            <div class="LOG">
+                <h1>로그인</h1>
+                <h4 style="margin-top:-20px;">로그인으로 문서를 확인하세요.</h4>
+            </div>
+
+            <div class="IN">
+                <h3>
+                    <p style="margin-left:15px; margin-bottom:-10px;">
+                        아이디: <input type="text">
+                    </p>
+                    <button class="Btn" onclick="START_LOGIN()">로그인하기</button>
+                    <p class="pw">
+                        비밀번호: <input type="text">
+                    </p>
+
+                </h3>
+            </div>
+            <h5 style="text-decoration: underline; margin-left:50px; margin-top:-10px; ">본 문서는 기존 회원만 열람 가능합니다.</h5>
+        </div>
+    </div>
+    <div class="SHOW">
+
+        <div class="MAIN">
+
+
+            <h1 style="text-align: center; margin-top: 50px;">비밀문서</h1>
+            <h3 style="text-align: center; margin-top:-20px;">그래도 역시 해당 내용은 외부 노출 금지입니다.</h3>
+            <h4 style="margin-left: 20px; margin-top: 50px; font-family: 'Nanum Myeongjo', serif;">1. '이지현'을 한자로
+                나타냈을 때,<br>&nbsp;&nbsp;
+                '지'에 해당하는 한자는 '새길 지'이다.<br>
+                <br>2. '새길 지'는 검색했을 때 바로 나오지 않는다.<br>
+                <br>3. 지현이는 머리 위 쪽만 탈모이다.<br>
+                <br>4. 지현이는 털 관리를 3일에 한 번씩 한다.<br>
+                <div class="zi">
+                    <img src="https://loughlinpersonnel.com/wp-content/uploads/2016/07/July-2016-Newsletter-Image.jpg"
+                        width="140" height="100"
+                        onmouseover="this.src='https://ssl.pstatic.net/dicimg/hanja/stroke/ja/16-09-37-094-15.gif';">
+                    <h5 style="font-family: 'Nanum Myeongjo', serif;">한자 '새길 지'가 궁금하다면, <br>위 그림에 마우스를!</h5>
+                </div>
+                <div class="number5">
+                    <br>5. 지현이는 대체로 단 음식을 좋아한다.<br>
+                    <br>6. 지현이는 아메리카노를 마시지 못한다.<br>
+                    <br>7. 지현이는 서프라이즈를 주거나 받는 것을 좋아한다.<br>
+                    <br>8. 지현이의 생일은 12월 27일이다.<br>
+                    <br>9. 지현이는 침대에서 24시간을 보낼 수 있다.<br>
+                </div>
+
+            </h4>
+            <div class="gone">
+                <h2
+                    style="text-align: center; margin-left: 190px; margin-top:70px; border: 1px dotted black; width: 300px;">
+                    비밀이라는 사실을 잊지 마!</h2>
+                <div style="margin-left:500px; margin-top:-40px;">
+                    <img src="https://static8.depositphotos.com/1000162/934/i/950/depositphotos_9343539-stock-photo-young-blonde-woman-shout-and.jpg"
+                        width="100" height="100">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
